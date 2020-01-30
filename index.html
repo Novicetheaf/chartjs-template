@@ -1,0 +1,48 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Chart.js</title>
+     <link rel="stylesheet" type="text/css" href="style.css"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.1.1/Chart.min.js" integrity="sha256-tTwmJ9+rkK30wTkOchpPT/AwziFqEPBkz0/qTxfBqV4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+        
+            <canvas id="chart"></canvas>
+            <script>
+                $(document).ready(function(){
+                    var ctx = $("#chart").get(0).getContext("2d");
+                    // pie chart data
+                    var data = [
+                        {
+                            value: 90,
+                            color: "cornflowerblue",
+                            highlight: "lightskyblue",
+                            label: "Income Taxed"
+                        },
+                        {
+                            value: 240,
+                            color: "chocolate",
+                            highlight: "papayawhip",
+                            label: "Net Pay"
+                        },
+                        {
+                            value: 30,
+                            color: "cornflowerblue",
+                            highlight: "lightskyblue",
+                            label: "USC Charged"
+                        }
+                    ];
+                    // draw
+                    var piechart = new Chart(ctx).Pie(data);
+
+                });
+            </script>
+           
+        </div>
+
+    
+  </body>
+</html>
